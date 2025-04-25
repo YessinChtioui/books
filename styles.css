@@ -1,0 +1,255 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #ff5733;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+#searchBar {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px 20px;
+    margin: 100px auto 20px;
+    display: block;
+    border: 2px solid #223b71;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #223b71;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#searchBar:focus {
+    outline: none;
+    border-color: #f8cf37;
+    box-shadow: 0 4px 12px rgba(34, 59, 113, 0.2);
+    background-color: white;
+}
+
+#searchBar:hover {
+    border-color: #3c5a9c;
+}
+
+#searchBar::placeholder {
+    color: #999;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.book-item {
+    width: 200px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 6px 6px #223b71;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.book-item:hover {
+    transform: translateY(-10px);
+}
+.book-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.book-item h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+
+}
+.notice {
+    background-color: #223b71;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 2px solid #223b71;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    animation: modalOpen 0.3s;
+  }
+  
+  @keyframes modalOpen {
+    from {transform: scale(0.9); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+  }
+  
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #223b71;
+    text-decoration: none;
+  }
+  
+  #modalBookCover {
+    max-width: 200px;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  #modalBookTitle {
+    text-align: center;
+    color: #223b71;
+    margin-bottom: 15px;
+  }
+  
+  #modalBookDescription {
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+  
+  #downloadBtn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 20px;
+      width: 90%;
+    }
+    
+    #modalBookCover {
+      max-width: 150px;
+    }
+  }
+
+  .request-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.request-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 6px rgba(34, 59, 113, 0.2);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.request-form h2 {
+    color: #223b71;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.request-subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #223b71;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #223b71;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff5733;
+    box-shadow: 0 4px 12px rgba(34, 59, 113, 0.2);
+    background-color: white;
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.request-button {
+    background-color: #223b71;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+    width: 200px;
+    text-align: center;
+}
+
+.request-button:hover {
+    background-color: #e64a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 87, 51, 0.3);
+}
+
+@media (max-width: 768px) {
+    .request-form {
+        padding: 25px;
+        margin: 0 15px;
+    }
+    
+    .request-button {
+        width: 100%;
+    }
+}
+
